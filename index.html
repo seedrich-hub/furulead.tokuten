@@ -15,7 +15,7 @@
       <section class="hero" aria-label="3大実践特典のメインビジュアル">
         <div class="hero__visual">
           <img
-            src="./assets/hero.png"
+            src="./hero.png"
             alt="ふるさと納税事業者の教科書と3大実践特典の紹介"
             width="1672"
             height="941"
@@ -39,7 +39,7 @@
         </div>
         <img
           class="lp-image"
-          src="./assets/benefits-overview.png"
+          src="./benefits-overview.png"
           alt="3大特典の概要。簡易診断、ページ改善事例集、自治体提案書テンプレートの流れ"
           width="1672"
           height="941"
@@ -74,7 +74,7 @@
         </div>
         <img
           class="lp-image"
-          src="./assets/benefit-diagnosis.png"
+          src="./benefit-diagnosis.png"
           alt="返礼品ポテンシャル簡易診断の内容。10の診断項目と4タイプの診断結果"
           width="1672"
           height="941"
@@ -91,10 +91,66 @@
         </div>
         <img
           class="lp-image"
-          src="./assets/benefit-before-after.png"
+          src="./benefit-before-after.png"
           alt="売れる返礼品ページ改善のビフォーアフター事例"
           width="1672"
           height="941"
           loading="lazy"
           decoding="async"
         >
+      </section>
+
+      <section class="section detail" aria-labelledby="template-title">
+        <div class="section-heading">
+          <p class="section-kicker">特典 3</p>
+          <h2 id="template-title">自治体提案書テンプレート</h2>
+          <p>会社概要、商品概要、供給体制、返礼品としての魅力、掲載後の販促施策まで、提案に必要な項目を整理できます。</p>
+        </div>
+        <img
+          class="lp-image"
+          src="./benefit-template.png"
+          alt="自治体提案書テンプレートの主な項目とできること"
+          width="1672"
+          height="941"
+          loading="lazy"
+          decoding="async"
+        >
+      </section>
+
+      <section class="closing" aria-labelledby="closing-title">
+        <div class="closing__text">
+          <h2 id="closing-title">自社商品の可能性を確認し、提案できる状態へ。</h2>
+          <p>
+            診断・ページ改善・自治体提案まで、LINE登録ですぐに受け取れます。
+            ふるさと納税を新しい販路に育てる第一歩としてご活用ください。
+          </p>
+        </div>
+        <img
+          src="./final-offer.png"
+          alt="まずは3大特典で自社商品の可能性を確認してください"
+          width="1854"
+          height="666"
+          loading="lazy"
+          decoding="async"
+        >
+      </section>
+
+      <section class="cta-band cta-band--final" aria-label="LINE登録">
+        <a class="line-cta js-line-link" href="https://lin.ee/ob3GT9m" data-line-link>
+          <span class="line-cta__bubble">LINE</span>
+          <span class="line-cta__text">LINE登録で<span>無料特典</span>を受け取る</span>
+          <span class="line-cta__arrow" aria-hidden="true">›</span>
+        </a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p class="copyright">© Copyright <span id="copyright-year">2026</span> FutureBright株式会社</p>
+      <a href="https://futurebright.co.jp/privacy" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>
+    </footer>
+
+    <script>
+      document.querySelector("#copyright-year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
