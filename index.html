@@ -14,7 +14,13 @@
     <main id="top">
       <section class="hero" aria-label="3大実践特典のメインビジュアル">
         <div class="hero__visual">
-          <img src="data:image/png;base64,[画像データ省略]" alt="ふるさと納税事業者の教科書と3大実践特典の紹介" width="1672" height="941" fetchpriority="high">
+          <img
+            src="./assets/hero.png"
+            alt="ふるさと納税事業者の教科書と3大実践特典の紹介"
+            width="1672"
+            height="941"
+            fetchpriority="high"
+          >
         </div>
       </section>
 
@@ -26,24 +32,69 @@
         </a>
       </section>
 
-      <!-- 中略: 各特典セクションと画像 -->
-
-      <section class="cta-band cta-band--final" aria-label="LINE登録">
-        <a class="line-cta js-line-link" href="https://lin.ee/ob3GT9m" data-line-link>
-          <span class="line-cta__bubble">LINE</span>
-          <span class="line-cta__text">LINE登録で<span>無料特典</span>を受け取る</span>
-          <span class="line-cta__arrow" aria-hidden="true">›</span>
-        </a>
+      <section class="section intro" aria-labelledby="intro-title">
+        <div class="section-heading">
+          <p class="section-kicker">3大特典でできること</p>
+          <h2 id="intro-title">可能性を見極め、選ばれる見せ方を学び、自治体へ提案する準備まで一気に進める</h2>
+        </div>
+        <img
+          class="lp-image"
+          src="./assets/benefits-overview.png"
+          alt="3大特典の概要。簡易診断、ページ改善事例集、自治体提案書テンプレートの流れ"
+          width="1672"
+          height="941"
+          loading="lazy"
+          decoding="async"
+        >
       </section>
-    </main>
 
-    <footer class="site-footer">
-      <p class="copyright">© Copyright <span id="copyright-year">2026</span> FutureBright株式会社</p>
-      <a href="https://futurebright.co.jp/privacy" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>
-    </footer>
+      <section class="benefit-summary" aria-label="特典の概要">
+        <article>
+          <span class="benefit-number">特典 1</span>
+          <h3>返礼品ポテンシャル簡易診断</h3>
+          <p>自社商品の強み・課題を10項目で整理し、改善のヒントを確認できます。</p>
+        </article>
+        <article>
+          <span class="benefit-number">特典 2</span>
+          <h3>売れる返礼品ページ改善事例集</h3>
+          <p>タイトル・写真・説明文の見せ方を、ビフォーアフターで具体的に学べます。</p>
+        </article>
+        <article>
+          <span class="benefit-number">特典 3</span>
+          <h3>自治体提案書テンプレート</h3>
+          <p>返礼品として採用されるために、伝えるべき情報を抜け漏れなく整理できます。</p>
+        </article>
+      </section>
 
-    <script>
-      document.querySelector("#copyright-year").textContent = new Date().getFullYear();
-    </script>
-  </body>
-</html>
+      <section class="section detail" aria-labelledby="diagnosis-title">
+        <div class="section-heading">
+          <p class="section-kicker">特典 1</p>
+          <h2 id="diagnosis-title">返礼品ポテンシャル簡易診断</h2>
+          <p>合否判定ではなく、改善ポイントを見つけるための診断です。</p>
+        </div>
+        <img
+          class="lp-image"
+          src="./assets/benefit-diagnosis.png"
+          alt="返礼品ポテンシャル簡易診断の内容。10の診断項目と4タイプの診断結果"
+          width="1672"
+          height="941"
+          loading="lazy"
+          decoding="async"
+        >
+      </section>
+
+      <section class="section detail" aria-labelledby="before-after-title">
+        <div class="section-heading">
+          <p class="section-kicker">特典 2</p>
+          <h2 id="before-after-title">売れる返礼品ページ改善事例集</h2>
+          <p>寄付者目線の見せ方改善、地域ストーリー、レビュー導線など、選ばれ方が変わる改善点を確認できます。</p>
+        </div>
+        <img
+          class="lp-image"
+          src="./assets/benefit-before-after.png"
+          alt="売れる返礼品ページ改善のビフォーアフター事例"
+          width="1672"
+          height="941"
+          loading="lazy"
+          decoding="async"
+        >
