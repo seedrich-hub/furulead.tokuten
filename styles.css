@@ -1,18 +1,9 @@
 :root {
-  --green: #005b35;
-  --green-deep: #003c25;
-  --green-bright: #078047;
-  --navy: #071d3c;
-  --navy-soft: #0d2c55;
-  --gold: #d99a21;
-  --gold-light: #f4d37c;
-  --cream: #fffaf0;
-  --paper: #ffffff;
-  --ink: #07172f;
-  --muted: #53606f;
-  --line: rgba(7, 29, 60, 0.14);
-  --shadow: 0 18px 50px rgba(7, 29, 60, 0.14);
-  --radius: 8px;
+  --page-bg: #f7f5ec;
+  --footer-bg: #071d3c;
+  --footer-text: #ffffff;
+  --link-hover: #f4d37c;
+  --max-content: 1180px;
 }
 
 * {
@@ -25,76 +16,146 @@ html {
 
 body {
   margin: 0;
-  color: var(--ink);
-  background:
-    radial-gradient(circle at 18% 4%, rgba(217, 154, 33, 0.13), transparent 26rem),
-    linear-gradient(180deg, #ffffff 0%, #fbfbf8 44%, #f7f8f4 100%);
+  color: #07172f;
+  background: var(--page-bg);
   font-family:
-    "Hiragino Mincho ProN",
-    "Yu Mincho",
-    "YuMincho",
-    "Noto Serif JP",
-    "Times New Roman",
-    serif;
-  line-height: 1.75;
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    "Noto Sans JP",
+    sans-serif;
+  line-height: 1.7;
 }
 
 img {
   display: block;
   max-width: 100%;
   height: auto;
+  border: 0;
 }
 
 a {
   color: inherit;
 }
 
-.hero {
-  width: min(1120px, calc(100% - 36px));
-  margin: 0 auto;
-  padding: clamp(28px, 4.6vw, 58px) 0 clamp(12px, 3vw, 34px);
+.page {
+  width: 100%;
+  overflow-x: hidden;
 }
 
-.section-kicker {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin: 0 0 14px;
-  padding: 7px 18px;
-  color: #fff;
-  background: linear-gradient(180deg, #075c39, #003b26);
-  border: 1px solid rgba(244, 211, 124, 0.78);
-  border-radius: 999px;
-  font-family:
-    "Hiragino Kaku Gothic ProN",
-    "Yu Gothic",
-    sans-serif;
-  font-size: 0.92rem;
-  font-weight: 800;
+.visual-section,
+.cta-section {
+  width: min(var(--max-content), calc(100% - 32px));
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.hero__visual {
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  overflow: hidden;
+.visual-section {
+  padding: clamp(14px, 3vw, 32px) 0;
 }
 
-.hero__visual img {
+.visual-section--hero {
+  padding-top: clamp(18px, 4vw, 44px);
+}
+
+.visual-section--wide {
+  width: min(1240px, calc(100% - 32px));
+}
+
+.lp-image {
   width: 100%;
 }
 
-.cta-band {
-  width: min(1120px, calc(100% - 36px));
-  margin: clamp(22px, 4vw, 44px) auto;
-  padding: clamp(18px, 3vw, 28px);
-  text-align: center;
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(255, 250, 240, 0.94)),
-    radial-gradient(circle at 10% 30%, rgba(244, 211, 124, 0.18), transparent 24rem);
-  border: 1px solid rgba(217, 154, 33, 0.28);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+.cta-section {
+  padding: clamp(16px, 3vw, 34px) 0;
 }
 
-.cta-band__copy {
-  margin: 0 0 14px;
+.cta-section--final {
+  padding-bottom: clamp(28px, 5vw, 56px);
+}
+
+.line-button-link {
+  display: block;
+  width: min(940px, 100%);
+  margin-right: auto;
+  margin-left: auto;
+  text-decoration: none;
+}
+
+.line-button-link:focus-visible {
+  outline: 3px solid #0a7b45;
+  outline-offset: 5px;
+}
+
+.line-button-image {
+  width: 100%;
+}
+
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 34px 18px 44px;
+  color: var(--footer-text);
+  background: var(--footer-bg);
+  font-family:
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    "Noto Sans JP",
+    sans-serif;
+}
+
+.copyright {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.site-footer a {
+  color: var(--footer-text);
+  font-size: 0.92rem;
+  text-underline-offset: 4px;
+}
+
+.site-footer a:hover {
+  color: var(--link-hover);
+}
+
+@media (max-width: 640px) {
+  body {
+    line-height: 1.6;
+  }
+
+  .visual-section,
+  .visual-section--wide,
+  .cta-section {
+    width: min(100% - 20px, var(--max-content));
+  }
+
+  .visual-section {
+    padding: 10px 0;
+  }
+
+  .visual-section--hero {
+    padding-top: 12px;
+  }
+
+  .cta-section {
+    padding: 14px 0;
+  }
+
+  .cta-section--final {
+    padding-bottom: 34px;
+  }
+
+  .line-button-link {
+    width: 100%;
+  }
+
+  .site-footer {
+    padding: 28px 16px 36px;
+  }
+}
